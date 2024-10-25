@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <script type="text/javascript" src="./cornify.js"></script>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+      let arr = [];
+      const name = "aliya";
+      window.addEventListener("keydown", (e) => {
+        // console.log(e.key);
+        arr.push(e.key);
+        // console.log(arr, arr.length, name.length);
+        let secretName = arr.slice(-name.length);
+        //or  pressed.splice(-secretCode.length - 1,pressed.length - secretCode.length);==>splice(-5,sup11 - 5)=(-5,6)=points to same charter in arr
+        //if (-5,13-5)=(-5,8) it trims the left part delete 8 items strats from -5
+        console.log(secretName);
+        //or secretName.join("").toString() === name
+        if (secretName.join("").toString().includes(name)) {
+          console.log("Ding Dong!");
+          cornify_add();
+        }
+      });
+      // let ex = ["s", "h", "a,", "i", "k", "a", "l", "i", "y", "a"];
+      // console.log(ex.splice(-4, 10 - 8)); -4 is strats from indx nd 10-8=2 is the how many charater to remove here 2 chrt removed nd return ['l','i']
+      // console.log(ex);here expect 2 chrter 'li' remng return [shaikaya]
+    </script>
+  </body>
+</html>
